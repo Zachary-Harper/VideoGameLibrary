@@ -11,7 +11,7 @@ import Foundation
 class Game {
     var title: String
     let inOut: Bool
-    let dueDate = Date
+    let dueDate: Date?
     
     init(title:String, inOut: Bool, dueDate: Date) {
         self.title = title
