@@ -10,21 +10,11 @@ import Foundation
 
 class Game {
     var title: String
-    let inOut: Bool
-    let dueDate: Date?
+    var checkedIn: Bool = true
+    var dueDate : Date?
     
-    init(title:String, inOut: Bool, dueDate: Date) {
-        self.title = title
-        self.inOut = inOut
-        self.dueDate = dueDate
-    }
-    
-    func checkOut() {
-        if inOut {
-            print("You've checked out \(title) and its due date is \(dueDate)")
-        }else {
-            print("You've not checked out a game")
-        }
+    init(title: String) {//initializing the title
+        self.title = title 
     }
 }
 
