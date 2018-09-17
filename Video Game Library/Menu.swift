@@ -16,15 +16,15 @@ class Menu {
     
     func go() {//handle making the menu run
         printMenu()
-        while !shouldQuit {
+        while !shouldQuit {//while
             printMenu()
             quit()
             print(getInput())
-            var input = getInput()
-            //we need to have input validation validation to make sure that it falls between 1 an d 7
+            let input = getInput()
+            //we need to have input validation validation to make sure that it falls between 1 and 7
             while !validateInput(input: input){
                 printMenu()
-                var input = getInput()
+                var _ = getInput()
             }
             handleInput(input)
         }
@@ -35,7 +35,7 @@ class Menu {
     
     func validateInput(input: String) -> Bool  {
         let validMenuOptions = Array(1...8)
-        guard let number = Int(input) else {
+        guard let number = Int(input) else {//if the number thats assigned is 
             return false
         }
         return validMenuOptions.contains(number)
@@ -94,6 +94,7 @@ class Menu {
     
     func quit() {
         shouldQuit = true
+        //printing out what should be said when the app closes
         
         print("Thanks for using our application")
     }

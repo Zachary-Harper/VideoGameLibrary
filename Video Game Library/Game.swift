@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Game {
-    var title: String
-    var checkedIn: Bool = true
-    var dueDate : Date?
+class Game {//creating the game class that will be used for all the games in the library
+    var title: String//title
+    var checkedIn: Bool = true //whether or not its checked in
+    var dueDate : Date?//where the due date would be if it has one
     
     init(title: String) {//initializing the title
         self.title = title 
